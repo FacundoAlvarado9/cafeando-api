@@ -30,13 +30,15 @@ For the cities ("ciudades"), we only have a link to the routes related to the re
 
 All the rest is delegated to this route module.
 
-`router.get('', ciudadesController.getAllCiudades)
+```javascript
+router.get('', ciudadesController.getAllCiudades)
 router.get('/:cod_postal', ciudadesController.getCiudadByCP)
-router.use('/:cod_postal/sucursales', sucursalesRouter)`
+router.use('/:cod_postal/sucursales', sucursalesRouter)
+```
 
 Which is in this step, delegated to the controller, which will be responsible from getting the solicited data from the Prisma model. For example for the request of a city based on the postal code:
 
-```
+```javascript
 const getCiudadByCP = async (req, res, next) =>{
   const {cod_postal} = req.params
 
