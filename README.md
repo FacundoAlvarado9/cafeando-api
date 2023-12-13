@@ -26,7 +26,9 @@ Even though this app may use of some refactoring, I tried to be as modular as po
 
 For the cities ("ciudades"), we only have a link to the routes related to the resource.
 
-`app.use('/ciudades', ciudadesRoute)`
+```javascript
+app.use('/ciudades', ciudadesRoute)
+```
 
 All the rest is delegated to this route module.
 
